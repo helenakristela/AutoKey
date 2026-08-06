@@ -16,8 +16,8 @@ Bahasa Indonesia dengan tiga kemampuan utama:
 3. **Auto-Space (Word Segmentation)**: teks tanpa spasi otomatis dipecah
    menjadi kata-kata valid memakai **Dynamic Programming** bergaya
    Viterbi atau IDF-cost.
-4. **Smart Trim** (0/1 Knapsack) untuk memendekkan teks secara optimal.
-5. **Bigram Language Model** untuk autocomplete yang sadar konteks kalimat.
+4. **Smart Trim**: (0/1 Knapsack) untuk memendekkan teks secara optimal.
+5. **Bigram Language Model**: untuk autocomplete yang sadar konteks kalimat.
 
 ## Fitur Program
 
@@ -97,7 +97,7 @@ uvicorn app.main:app --reload --port 8000
 Backend akan otomatis load `data/kamus.json` dan membangun Trie saat
 startup. Cek `http://localhost:8000/api/stats` untuk memastikan berjalan.
 
-### 3. Jalankan frontend
+### 2. Jalankan frontend
 
 ```bash
 cd frontend
@@ -198,7 +198,7 @@ Terletak di `backend/app/knapsack.py`. Tiap kata di teks = 1 item dengan
 `dp[i][w]` dibangun sesuai basis/rekurens, lalu
 di traceback untuk menentukan kata mana saja yang dipertahankan, sambil mempertahankan urutan asli kata dalam teks.
 
-### Bigram Language Model
+## Bigram Language Model
 
 Terletak di `backend/app/bigram.py`. Selama sesi editor berjalan, tiap kali dua kata
 berurutan **sama-sama valid** di kamus, pasangan `(kata_sebelumnya,
