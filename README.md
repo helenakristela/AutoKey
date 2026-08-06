@@ -16,7 +16,7 @@ Bahasa Indonesia dengan tiga kemampuan utama:
 3. **Auto-Space (Word Segmentation)**: teks tanpa spasi otomatis dipecah
    menjadi kata-kata valid memakai **Dynamic Programming** bergaya
    Viterbi atau IDF-cost.
-4. **Smart Trim**: (0/1 Knapsack) untuk memendekkan teks secara optimal.
+4. **Smart Trim** (0/1 Knapsack): untuk memendekkan teks secara optimal.
 5. **Bigram Language Model**: untuk autocomplete yang sadar konteks kalimat.
 
 ## Fitur Program
